@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Blocks Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Alphabet Blocks Tetris</h1>
+        <div class="game-wrapper">
+            <!-- Game info section on the left -->
+            <div class="game-info">
+                <div class="score-board">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <div class="level">Level: <span id="level">1</span></div>
+                    <div class="lines">Lines: <span id="lines">0</span></div>
+                </div>
+                <!-- Preview of next piece -->
+                <div class="next-piece">
+                    <h3>Next Block:</h3>
+                    <canvas id="previewCanvas" width="120" height="120"></canvas>
+                </div>
+            </div>
+            
+            <!-- Main game canvas -->
+            <canvas id="gameCanvas"></canvas>
+            
+            <!-- Game controls section -->
+            <div class="game-controls">
+                <div class="controls-info">
+                    <h3>Controls</h3>
+                    <p>← → : Move Left/Right</p>
+                    <p>↑ : Rotate</p>
+                    <p>↓ : Soft Drop</p>
+                    <p>Space : Hard Drop</p>
+                    <p>P : Pause</p>
+                </div>
+                <div class="button-controls">
+                    <button id="startBtn">Start Game</button>
+                    <button id="pauseBtn">Pause</button>
+                    <button id="restartBtn">Restart</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game over modal -->
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <div class="score-display">
+                    <p>Your Final Score:</p>
+                    <div class="final-score" id="finalScore">0</div>
+                </div>
+                <p>Want to try again?</p>
+                <button id="playAgainBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
